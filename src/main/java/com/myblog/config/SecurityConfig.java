@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/api/**").permitAll()
-              .antMatchers(HttpMethod.POST, "/api/auth/signup").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/signup").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/auth/signin").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/posts").permitAll()
                 .anyRequest()
@@ -52,11 +52,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-/*    What is InMemoryAuthentication?
+/**    What is InMemoryAuthentication?
   =>When you are developing an application If we don't want to store username and password to database
   If you want store your usename and password in the form of object then we are using inMemoryAuthentication
   this is for testing */
- /*   @Bean
+ /**   @Bean
     @Override
     public UserDetailsService userDetailsService() {
         UserDetails user = User.builder()
