@@ -31,6 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder getpasswordEncoder() {
         return new BCryptPasswordEncoder();
+        System.out.println("Line Added");
     }
 
 /*  What is configure method does?
